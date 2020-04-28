@@ -9,12 +9,13 @@ clear ;
 clear clc;
 ma = 1;
 %set mb to various powers of 100
-mb = 100000000;   
+mb = 100000000;
+% va and vb are velocities of a and b
 va(1)= double(0);
 vb(1)= double(-10);
 n=1;
 while (true)
-    %check if it is the last possible collision
+    %check if it is the last possible collision. This would be true if the b block is going right faster than block a
     if (vb(n)>0 && va(n)<vb(n))
         break;
     end
